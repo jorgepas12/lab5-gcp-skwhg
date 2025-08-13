@@ -9,6 +9,6 @@ terraform {
 
 provider "google" {
   credentials = file(var.credentials_file)
-  project     = "fluted-oasis-451905-n7"
+  project     = var.project_id
   region      = var.region
 }
