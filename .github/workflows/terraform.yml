@@ -35,5 +35,8 @@ jobs:
         run: terraform plan
 
       - name: Apply (Main branch)
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.event_name == 'push' && github.ref_name == 'main'
         run: terraform apply -auto-approve
+
+      - name: Debug evento
+        run: echo "event=${{ github.event_name }} ref=${{ github.ref }} ref_name=${{ github.ref_name }}"
