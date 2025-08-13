@@ -1,5 +1,5 @@
 variable "project_id" {
-  default     = "fluted-oasis-451905-n7"
+  default = "fluted-oasis-451905-n7"
 }
 
 variable "region" {
